@@ -1,0 +1,11 @@
+<h1>All Vets</h1>
+
+<ul id="vets">
+	<% @vets.each do |vet| %>
+	<li>
+		<%= link_to vet.name, vet_path(vet) %>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to "Add New Vet", new_vet_path %>

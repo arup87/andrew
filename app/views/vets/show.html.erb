@@ -1,0 +1,30 @@
+<h1>Vet</h1>
+<ul id="vets">
+	<li>
+		<%= @vet.name  %>
+	</li>
+	<li>
+		<%= @vet.address  %>
+	</li>
+	<li>
+		<%= @vet.address_line_two  %>
+	</li>
+	<li>
+		<%= @vet.city  %>
+	</li>
+	<li>
+		<%= @vet.state  %>
+	</li>
+	<li>
+		<%= @vet.zip  %>
+	</li>
+	<li>
+		<%= @vet.school  %>
+	</li>
+	<li>
+		<%= @vet.years_in_practice  %>
+	</li>
+</ul>
+<%= link_to 'Edit', edit_vet_path(@vet) %>
+</br>
+<%= link_to "<< Back to Vets List", vets_path %> 

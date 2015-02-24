@@ -1,0 +1,8 @@
+<%= simple_form_for @appointment do |f| %>  
+	<%= f.input :date_of_visit %> 
+	<%= f.association :pet %>
+	<%= f.association :vet %>
+	<%= f.input :reminder, as: :select %>   
+    <%= f.input :reason_for_visit %>  
+	<%= f.button :submit %>   
+<% end %>

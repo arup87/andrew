@@ -1,0 +1,27 @@
+<h1>Appointments</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date of visit</th>
+      <th>Pet Name</th>
+      <th>Pet Owner</th>
+      <th>Vet Name</th>
+      <th>Reason for visit</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= Time.at(appointment.date_of_visit).strftime("%B %e, %Y at %I:%M %p")%></td>
+        <td><%= appointment.pet.name %></td>
+        <td><%= appointment.pet.customer.name %></td>
+        <td><%= appointment.vet.name %></td>
+        <td><%= appointment.reason_for_visit %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'Create New Appointment', new_appointment_path %>

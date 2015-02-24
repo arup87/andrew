@@ -1,0 +1,7 @@
+<h1><%= @customer.name%></h1>
+<% @customer.appointments.each do |appointment| %>
+<p><%=appointment.pet.name%></p>
+<p><%=appointment.date_of_visit%></p>
+<%end%>
+<%= link_to "<< All Customers", customers_path%> || <%= link_to "Edit Customer", edit_customer_path(@customer) %> 
+
